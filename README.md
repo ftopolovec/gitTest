@@ -1,1 +1,1 @@
-# gitTest for beginer
+# gitTest - jQuery kalkulator proizvoda
