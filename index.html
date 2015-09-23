@@ -1,4 +1,4 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
 	<title>This is my first Git test project</title>
@@ -6,11 +6,32 @@
 <body>
 	<h1>Welcome to GitHub!</h1>
 	<p>Under we have unordered list</p>
-	<ul>
-		<li>List Item 1</li>
-		<li>List Item 2</li>
-		<li>List Item 3</li>
-		<li>List Item 4</li>
-	</ul>
+
+	<input type="checkbox" class="option" value="5">Kruh<br>
+	<input type="checkbox" class="option" value="12">Kolač<br>	
+	<input type="checkbox" class="option" value="9">Mrvice<br>	
+	<input type="checkbox" class="option" value="200">Kamera<br>
+	<input type="checkbox" class="option" value="25">Baterija<br>
+	
+	<div id="total">0 kn</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script>
+		$(function(){
+			$('.option').click(function(){
+
+				var total = 0;
+
+				$('.option:checked').each(function(){
+
+					total += parseInt($(this).val());
+
+				})
+
+				$('#total').html(total + 'kn');
+
+			});
+		});
+	</script>
 </body>
 </html>
